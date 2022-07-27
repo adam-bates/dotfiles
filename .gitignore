@@ -1,0 +1,12 @@
+*
+!.gitignore
+
+!.config
+!.config/*
+!.config/**/*
+
+!.tmux.conf
+!.zshrc
+
+**/.DS_Store
+

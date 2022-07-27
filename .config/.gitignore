@@ -1,0 +1,6 @@
+configstore
+filezilla
+znt
+
+nvim/**/*_compiled.lua
+
