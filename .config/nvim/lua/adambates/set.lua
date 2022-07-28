@@ -14,5 +14,7 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
+vim.wo.signcolumn = "yes"
+
 vim.g.mapleader = " "
 
