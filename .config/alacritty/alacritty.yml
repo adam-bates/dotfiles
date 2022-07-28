@@ -66,7 +66,7 @@ key_bindings:
   - { key: D, mods: Command, chars: "\x01\x64" }
   
   # Create a new tmux window
-  - { key: T, mods: Command, chars: "\x01\x63" }
+  - { key: N, mods: Command, chars: "\x01\x63" }
   
   # Kill the current tmux pane (and window if last pane)
   - { key: W, mods: Command, chars: "\x01\x78" }
