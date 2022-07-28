@@ -1,3 +1,5 @@
+local api = require("nvim-tree.api")
+
 require("nvim-tree").setup({
     open_on_setup = true,
     open_on_tab = false,
@@ -7,6 +9,13 @@ require("nvim-tree").setup({
         relativenumber = true,
         side = "left",
         adaptive_size = true,
+        mappings = {
+            list = {
+                { key = "<leader><CR>", action = api.node.open.tab },
+                { key = "<leader><Left>", action = api.node.open.vertical },
+                { key = "<leader><Right>", action = api.node.open.horizontal },
+            },
+        },
     },
     renderer = {
         highlight_git = true,
@@ -16,9 +25,4 @@ require("nvim-tree").setup({
         exclude = { ".git", "node_modules" },
     },
 })
-
-local api = require("nvim-tree.api")
-
-vim.keymap.set("n", "<leader><CR>", api.node.open.tab)
-
 
