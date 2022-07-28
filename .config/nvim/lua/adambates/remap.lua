@@ -3,7 +3,12 @@ local nnoremap = require("adambates.keymap").nnoremap
 nnoremap("<leader>w", "<cmd>w<CR>")
 nnoremap("<leader>q", "<cmd>q<CR>")
 
-nnoremap("<leader>p", "<c-w><c-p>")
+nnoremap("<leader>p", "<c-w>w")
+nnoremap("<leader><Up>", "<c-w><Up>")
+nnoremap("<leader><Down>", "<c-w><Down>")
+nnoremap("<leader><Left>", "<c-w><Left>")
+nnoremap("<leader><Right>", "<c-w><Right>")
+nnoremap("<leader>c", "<c-w>c")
 
 nnoremap("<leader>e", "<cmd>NvimTreeFocus<CR>")
 nnoremap("<leader>E", "<cmd>NvimTreeToggle<CR>")
@@ -27,6 +32,5 @@ nnoremap("<leader>[", "gT")
 nnoremap("<leader>}", "<cmd>tabm +1<CR>")
 nnoremap("<leader>{", "<cmd>tabm -1<CR>")
 
-nnoremap("<leader>c", "<c-w>c")
 nnoremap("<leader>C", "<cmd>tabclose<CR>")
 
