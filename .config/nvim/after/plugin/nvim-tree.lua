@@ -1,6 +1,17 @@
 local api = require("nvim-tree.api")
 
+local on_attach = function(bufnr)
+    local opts = { buffer = bufnr, noremap = true }
+
+    vim.keymap.set("n", "<leader><CR>", api.node.open.tab, opts)
+    vim.keymap.set("n", "<leader><Left>", api.node.open.vertical, opts)
+    vim.keymap.set("n", "<leader><Up>", api.node.open.horizontal, opts)
+    vim.keymap.set("n", "=", api.tree.change_root_to_node, opts)
+end
+
 require("nvim-tree").setup({
+    on_attach = on_attach,
+
     open_on_setup = true,
     open_on_tab = false,
     hijack_cursor = true,
@@ -9,13 +20,6 @@ require("nvim-tree").setup({
         relativenumber = true,
         side = "left",
         adaptive_size = true,
-        mappings = {
-            list = {
-                { key = "<leader><CR>", action = api.node.open.tab },
-                { key = "<leader><Left>", action = api.node.open.vertical },
-                { key = "<leader><Right>", action = api.node.open.horizontal },
-            },
-        },
     },
     renderer = {
         highlight_git = true,
