@@ -1,7 +1,7 @@
-# /Users/adambates/.config/tmuxinator/live2.yml
+# /Users/adambates/.config/tmuxinator/default.yml
 
-name: live2
-root: ~/Projects/amg/amglive2-backend
+name: redis
+root: ~/Projects
 
 # Optional tmux socket
 # socket_name: foo
@@ -39,33 +39,12 @@ root: ~/Projects/amg/amglive2-backend
 # startup_window: editor
 
 # Specifies (by index) which pane of the specified window will be selected on project startup. If not set, the first pane is used.
-# startup_pane: 1
+# startup_pane: 2
 
 # Controls whether the tmux session should be attached to automatically. Defaults to true.
 # attach: false
 
 windows:
-  - frontend:
-      root: ~/Projects/amg/amglive2-frontend
-      layout: main-vertical
-      panes:
-        - vim
-        - git status
-  - backend:
-      layout: main-vertical
-      panes:
-        - vim
-        - git status
-  - constants:
-      root: ~/Projects/amg/amglive2-constants
-      layout: main-vertical
-      panes:
-        - vim
-        - git status
-  - parser:
-      root: ~/Projects/amg/amglive2-parser
-      layout: main-vertical
-      panes:
-        - vim
-        - git status
+  - client: sleep 3; redis-cli
+  - server: brew services info redis
 
