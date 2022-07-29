@@ -5,6 +5,8 @@ local vnoremap = keymap.vnoremap
 local xnoremap = keymap.xnoremap
 local inoremap = keymap.inoremap
 
+inoremap("<esc><CR>", "<esc>o")
+
 nnoremap("<leader>w", "<cmd>w<CR>")
 nnoremap("<leader>q", "<cmd>q<CR>")
 

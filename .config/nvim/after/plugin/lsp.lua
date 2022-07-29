@@ -13,14 +13,16 @@ local lsp_mappings = function(client, bufnr)
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
     vim.keymap.set("n", "gi", vim.lsp.buf.implementation, bufopts)
     vim.keymap.set("n", "gb", "<c-t>", bufopts)
-    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
+
+    vim.keymap.set('n', '<c-k>', vim.lsp.buf.signature_help, bufopts)
+    vim.keymap.set('i', '<c-k>', vim.lsp.buf.signature_help, bufopts)
 
     vim.keymap.set("n", "<leader>dj", vim.diagnostic.goto_next, bufopts)
     vim.keymap.set("n", "<leader>dk", vim.diagnostic.goto_prev, bufopts)
     vim.keymap.set("n", "<leader>dl", "<cmd>Telescope diagnostics<CR>", bufopts)
 
-    vim.keymap.set("n", "<space>r", vim.lsp.buf.rename, bufopts)
-    vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
+    vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, bufopts)
+    vim.keymap.set('n', '<leader>f', vim.lsp.buf.formatting, bufopts)
 end
 
 require('lspconfig').tsserver.setup({
