@@ -38,8 +38,9 @@ nnoremap("<leader>C", "<cmd>tabclose<CR>")
 nnoremap("<leader>e", "<cmd>NvimTreeFocus<CR>")
 nnoremap("<leader>E", "<cmd>NvimTreeToggle<CR>")
 
-nnoremap("<leader>j", "<cmd>Telescope find_files<CR>")
 nnoremap("<leader>h", "<cmd>Telescope help_tags<CR>")
+nnoremap("<leader>j", "<cmd>Telescope find_files<CR>")
+nnoremap("<leader>k", "<cmd>Telescope live_grep<CR>")
 
 nnoremap("<leader>/", '<CMD>lua require("Comment.api").toggle_current_linewise()<CR>')
 nnoremap("<leader>?", '<CMD>lua require("Comment.api").toggle_current_blockwise()<CR>')

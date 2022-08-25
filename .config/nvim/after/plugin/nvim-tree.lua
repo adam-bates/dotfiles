@@ -25,7 +25,11 @@ require("nvim-tree").setup({
         highlight_git = true,
         highlight_opened_files = "*",
     },
+    git = {
+        ignore = false,
+    },
     filters = {
+        dotfiles = false,
         exclude = { ".git", "node_modules" },
     },
 })

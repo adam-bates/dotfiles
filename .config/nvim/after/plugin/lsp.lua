@@ -12,6 +12,7 @@ local lsp_mappings = function(client, bufnr)
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
     vim.keymap.set("n", "gi", vim.lsp.buf.implementation, bufopts)
+    vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
     vim.keymap.set("n", "gb", "<c-t>", bufopts)
 
     vim.keymap.set('n', '<c-k>', vim.lsp.buf.signature_help, bufopts)
@@ -101,12 +102,13 @@ function _G.cycle_diagnostics()
         vim.diagnostic.disable()
 
         vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-        vim.lsp.diagnostic.on_publish_diagnostics, {
-            virtual_text = false,
-            signs = true,
-            underline = true,
-            update_in_insert = false,
-        }
+            vim.lsp.diagnostic.on_publish_diagnostics,
+            {
+                virtual_text = false,
+                signs = true,
+                underline = true,
+                update_in_insert = false,
+            }
         )
 
         vim.diagnostic.config({ virtual_lines = true, virtual_text = false })
