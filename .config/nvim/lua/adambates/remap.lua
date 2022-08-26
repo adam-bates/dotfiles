@@ -7,10 +7,8 @@ local inoremap = keymap.inoremap
 
 inoremap("<esc><CR>", "<esc>o")
 
-nnoremap("[", "{")
-nnoremap("]", "}")
-nnoremap("{", "<c-u>")
-nnoremap("}", "<c-d>")
+nnoremap(":", "<c-u>")
+nnoremap('"', "<c-d>")
 
 nnoremap("<leader>w", "<cmd>w<CR>")
 nnoremap("<leader>q", "<cmd>q<CR>")
