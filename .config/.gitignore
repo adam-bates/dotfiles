@@ -1,6 +1,7 @@
 configstore
 filezilla
 znt
+yarn
 
 nvim/**/*_compiled.lua
 
