@@ -46,12 +46,3 @@ nnoremap("<leader>h", "<cmd>Telescope help_tags<CR>")
 nnoremap("<leader>j", "<cmd>Telescope find_files<CR>")
 nnoremap("<leader>k", "<cmd>Telescope live_grep<CR>")
 
-nnoremap("<leader>/", '<CMD>lua require("Comment.api").toggle.linewise.current()<CR>')
-nnoremap("<leader>?", '<CMD>lua require("Comment.api").toggle.blockwise.current()<CR>')
-
-vnoremap("<leader>/", '<CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>')
-vnoremap("<leader>?", '<CMD>lua require("Comment.api").toggle.blockwise(vim.fn.visualmode())<CR>')
-
-xnoremap("<leader>/", '<CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>')
-xnoremap("<leader>?", '<CMD>lua require("Comment.api").toggle.blockwise(vim.fn.visualmode())<CR>')
-
