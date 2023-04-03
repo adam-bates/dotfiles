@@ -1,0 +1,57 @@
+theme = "custom"
+
+[editor]
+line-number = "relative"
+bufferline = "multiple"
+middle-click-paste = false
+rulers = [80]
+color-modes = true
+auto-pairs = false
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.file-picker]
+hidden = false
+
+
+[keys.normal]
+esc = ["collapse_selection", "keep_primary_selection"]
+g = { a = "code_action" }
+G = "goto_last_line"
+"{" = "goto_prev_paragraph"
+"}" = "goto_next_paragraph"
+";" = "half_page_up"
+"'" = "half_page_down"
+D = "kill_to_line_end"
+C = ["kill_to_line_end", "insert_mode"]
+
+[keys.normal.space]
+"/" = "toggle_comments"
+"w" = ":write"
+"W" = ":write-all"
+"[" = "goto_previous_buffer"
+"]" = "goto_next_buffer"
+"c" = ":buffer-close"
+
+
+[keys.select]
+esc = ["collapse_selection", "keep_primary_selection"]
+"{" = "goto_prev_paragraph"
+"}" = "goto_next_paragraph"
+";" = "half_page_up"
+"'" = "half_page_down"
+
+[keys.select.space]
+"/" = "toggle_comments"
+"w" = ":write"
+"W" = ":write-all"
+"[" = "goto_previous_buffer"
+"]" = "goto_next_buffer"
+"c" = ":buffer-close"
+
+

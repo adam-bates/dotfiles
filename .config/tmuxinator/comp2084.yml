@@ -1,7 +1,6 @@
 name: comp2084
-root: ~/Projects/georgian/comp2084
+root: ~/Projects/georgian/comp2084/Laptopia
 
 windows:
   - comp2084:
-    - vim prep/README.md
 

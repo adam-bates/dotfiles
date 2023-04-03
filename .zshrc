@@ -111,8 +111,6 @@ source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-alias vim="nvim"
-
 alias tt="tmuxinator start menu"
 alias ts="tmuxinator start"
 alias to="tmuxinator open"

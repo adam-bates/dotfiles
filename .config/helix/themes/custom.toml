@@ -1,0 +1,12 @@
+inherits = "base16_transparent"
+
+"ui.background" = { fg = "light-gray" }
+"ui.linenr" = "gray"
+"ui.virtual.ruler" = { bg = "#303030" }
+
+"variable" = "white"
+"constant" = "light-yellow"
+"constant.numeric" = "yellow"
+"type" = "yellow"
+"namespace" = "magenta"
+"comment" = "#90a840"

@@ -12,7 +12,7 @@ end
 require("nvim-tree").setup({
     on_attach = on_attach,
 
-    open_on_setup = true,
+    -- open_on_setup = true,
     open_on_tab = false,
     hijack_cursor = true,
     view = {
@@ -34,3 +34,4 @@ require("nvim-tree").setup({
     },
 })
 
+require('nvim-tree').toggle(false, true)

@@ -71,5 +71,6 @@ key_bindings:
   # Kill the current tmux pane (and window if last pane)
   - { key: W, mods: Command, chars: "\x01\x78" }
 
-  - { key: Equals, mods: Command, action: SpawnNewInstance }
+  - { key: N, mods: Command|Shift, action: SpawnNewInstance }
+
 
