@@ -28,49 +28,49 @@ font:
 
 key_bindings:
   # Rename the current tmux window
-  - { key: Return, mods: Command, chars: "\x01\x2c" }
+  - { key: Return, mods: Control, chars: "\x01\x2c" }
 
   # Select window 1-9
-  - { key: Key1, mods: Command, chars: "\x01\x31" }
-  - { key: Key2, mods: Command, chars: "\x01\x32" }
-  - { key: Key3, mods: Command, chars: "\x01\x33" }
-  - { key: Key4, mods: Command, chars: "\x01\x34" }
-  - { key: Key5, mods: Command, chars: "\x01\x35" }
-  - { key: Key6, mods: Command, chars: "\x01\x36" }
-  - { key: Key7, mods: Command, chars: "\x01\x37" }
-  - { key: Key8, mods: Command, chars: "\x01\x38" }
-  - { key: Key9, mods: Command, chars: "\x01\x39" }
+  - { key: Key1, mods: Control, chars: "\x01\x31" }
+  - { key: Key2, mods: Control, chars: "\x01\x32" }
+  - { key: Key3, mods: Control, chars: "\x01\x33" }
+  - { key: Key4, mods: Control, chars: "\x01\x34" }
+  - { key: Key5, mods: Control, chars: "\x01\x35" }
+  - { key: Key6, mods: Control, chars: "\x01\x36" }
+  - { key: Key7, mods: Control, chars: "\x01\x37" }
+  - { key: Key8, mods: Control, chars: "\x01\x38" }
+  - { key: Key9, mods: Control, chars: "\x01\x39" }
   
   # Select a new tmux session for the attached client interactively
-  - { key: K, mods: Command|Shift, chars: "\x01\x73" }
+  - { key: Space, mods: Control|Shift, chars: "\x01\x73" }
 
   # Change to the previous tmux window
-  - { key: LBracket, mods: Command|Shift, chars: "\x01\x70" }
+  - { key: J, mods: Control|Shift, chars: "\x01\x70" }
   
   # Change to the next tmux window
-  - { key: RBracket, mods: Command|Shift, chars: "\x01\x6e" }
+  - { key: Semicolon, mods: Control|Shift, chars: "\x01\x6e" }
 
   # Change to the previous tmux pane
-  - { key: LBracket, mods: Command, chars: "\x01\x1b\x5b\x44" }
+  - { key: J, mods: Control, chars: "\x01\x1b\x5b\x44" }
 
   # Change to the next tmux pane
-  - { key: RBracket, mods: Command, chars: "\x01\x1b\x5b\x43" }
+  - { key: Semicolon, mods: Control, chars: "\x01\x1b\x5b\x43" }
   
   # Split the current pane into two, left and right
-  - { key: S, mods: Command, chars: "\x01\x25" }
+  - { key: S, mods: Control, chars: "\x01\x25" }
   
   # Split the current pane into two, top and bottom.
-  - { key: S, mods: Command|Shift, chars: "\x01\x22" }
+  - { key: S, mods: Control|Shift, chars: "\x01\x22" }
   
   # Detach the current tmux client
-  - { key: D, mods: Command, chars: "\x01\x64" }
+  - { key: D, mods: Control, chars: "\x01\x64" }
   
   # Create a new tmux window
-  - { key: N, mods: Command, chars: "\x01\x63" }
+  - { key: N, mods: Control, chars: "\x01\x63" }
   
   # Kill the current tmux pane (and window if last pane)
-  - { key: W, mods: Command, chars: "\x01\x78" }
+  - { key: W, mods: Control, chars: "\x01\x78" }
 
-  - { key: N, mods: Command|Shift, action: SpawnNewInstance }
+  - { key: N, mods: Control|Shift, action: SpawnNewInstance }
 
 

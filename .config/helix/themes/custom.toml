@@ -1,3 +1,4 @@
+# https://github.com/helix-editor/helix/blob/master/runtime/themes/base16_transparent.toml
 inherits = "base16_transparent"
 
 "ui.background" = { fg = "light-gray" }

@@ -7,6 +7,7 @@ middle-click-paste = false
 rulers = [80]
 color-modes = true
 auto-pairs = false
+scrolloff = 8
 
 [editor.lsp]
 display-messages = true
@@ -20,13 +21,23 @@ hidden = false
 
 
 [keys.normal]
+h = "no_op"
+
+j = "move_char_left"
+";" = "move_char_right"
+k = "move_visual_line_up"
+l = "move_visual_line_down"
+
+V = ["select_mode", "extend_to_line_bounds"]
 esc = ["collapse_selection", "keep_primary_selection"]
+
 g = { a = "code_action" }
 G = "goto_last_line"
-"{" = "goto_prev_paragraph"
-"}" = "goto_next_paragraph"
-";" = "half_page_up"
-"'" = "half_page_down"
+
+"C-k" = ["goto_prev_paragraph", "move_visual_line_up", "collapse_selection"]
+"C-l" = ["goto_next_paragraph", "collapse_selection"]
+"C-up" = ["page_up", "align_view_center"]
+"C-down" = ["page_down", "align_view_center"]
 D = "kill_to_line_end"
 C = ["kill_to_line_end", "insert_mode"]
 
@@ -34,24 +45,46 @@ C = ["kill_to_line_end", "insert_mode"]
 "/" = "toggle_comments"
 "w" = ":write"
 "W" = ":write-all"
-"[" = "goto_previous_buffer"
-"]" = "goto_next_buffer"
+"q" = ":quit"
+"Q" = ":quit-all"
+"j" = "goto_previous_buffer"
+"left" = "goto_previous_buffer"
+";" = "goto_next_buffer"
+"right" = "goto_next_buffer"
 "c" = ":buffer-close"
 
 
 [keys.select]
-esc = ["collapse_selection", "keep_primary_selection"]
-"{" = "goto_prev_paragraph"
-"}" = "goto_next_paragraph"
-";" = "half_page_up"
-"'" = "half_page_down"
+h = "no_op"
+
+j = "extend_char_left"
+";" = "extend_char_right"
+k = "extend_line_up"
+l = "extend_line_down"
+
+esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
+
+g = { a = "code_action" }
+G = "goto_last_line"
+
+"C-k" = ["goto_prev_paragraph", "extend_line_up"]
+"C-l" = ["goto_next_paragraph"]
+"C-up" = ["page_up", "align_view_center"]
+"C-down" = ["page_down", "align_view_center"]
+D = "kill_to_line_end"
+C = ["kill_to_line_end", "insert_mode"]
+
 
 [keys.select.space]
 "/" = "toggle_comments"
 "w" = ":write"
 "W" = ":write-all"
-"[" = "goto_previous_buffer"
-"]" = "goto_next_buffer"
+"q" = ":quit"
+"Q" = ":quit-all"
+"j" = "goto_previous_buffer"
+"left" = "goto_previous_buffer"
+";" = "goto_next_buffer"
+"right" = "goto_next_buffer"
 "c" = ":buffer-close"
 
 
