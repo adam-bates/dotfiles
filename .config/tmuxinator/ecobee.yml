@@ -1,0 +1,25 @@
+# /Users/adambates/.config/tmuxinator/ecobee.yml
+
+name: ecobee
+root: ~/Projects/ecobee
+
+windows:
+  - beehive-api:
+      root: ~/Projects/ecobee/beehive-api
+      layout: even-horizontal
+      panes:
+        - code: hx .
+        - cli: la && git status && yarn start:dev
+  - consumer-portal:
+      root: ~/Projects/ecobee/ecobee-consumer-portal
+      layout: even-horizontal
+      panes:
+        - code: hx .
+        - cli: la && git status && ./cportal-docker.sh exec upd
+  - auth0-admin-service:
+      root: ~/Projects/ecobee/auth0-admin-service
+      layout: even-horizontal
+      panes:
+        - code: hx .
+        - cli: la && git status && make run
+

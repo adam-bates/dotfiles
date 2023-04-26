@@ -40,36 +40,35 @@ key_bindings:
   - { key: Key7, mods: Control, chars: "\x01\x37" }
   - { key: Key8, mods: Control, chars: "\x01\x38" }
   - { key: Key9, mods: Control, chars: "\x01\x39" }
-  
+
   # Select a new tmux session for the attached client interactively
   - { key: Space, mods: Control|Shift, chars: "\x01\x73" }
 
   # Change to the previous tmux window
-  - { key: J, mods: Control|Shift, chars: "\x01\x70" }
-  
-  # Change to the next tmux window
-  - { key: Semicolon, mods: Control|Shift, chars: "\x01\x6e" }
+  - { key: Tab, mods: Control|Shift, chars: "\x01\x70" }
 
-  - { key: J, mods: Control, chars: "\x01\x08" }
-  - { key: K, mods: Control, chars: "\x01\x0a" }
-  - { key: L, mods: Control, chars: "\x01\x0b" }
-  - { key: Semicolon, mods: Control, chars: "\x01\x0c" }
-  
+  # Change to the next tmux window
+  - { key: Tab, mods: Control, chars: "\x01\x6e" }
+
+  - { key: J, mods: Control|Shift, chars: "\x01\x08" }
+  - { key: K, mods: Control|Shift, chars: "\x01\x0a" }
+  - { key: L, mods: Control|Shift, chars: "\x01\x0b" }
+  - { key: Semicolon, mods: Control|Shift, chars: "\x01\x0c" }
+
   # Split the current pane into two, left and right
   - { key: S, mods: Control, chars: "\x01\x25" }
-  
+
   # Split the current pane into two, top and bottom.
   - { key: S, mods: Control|Shift, chars: "\x01\x22" }
-  
+
   # Detach the current tmux client
-  - { key: D, mods: Control, chars: "\x01\x64" }
-  
+  - { key: D, mods: Control|Shift, chars: "\x01\x64" }
+
   # Create a new tmux window
-  - { key: N, mods: Control, chars: "\x01\x63" }
-  
+  - { key: N, mods: Control|Shift, chars: "\x01\x63" }
+
   # Kill the current tmux pane (and window if last pane)
-  - { key: W, mods: Control, chars: "\x01\x78" }
+  - { key: W, mods: Control|Shift, chars: "\x01\x78" }
 
-  - { key: N, mods: Control|Shift, action: SpawnNewInstance }
-
+  - { key: N, mods: Command|Shift, action: SpawnNewInstance }
 

@@ -45,6 +45,10 @@ root: ~/.config
 # attach: false
 
 windows:
+  - hx:
+      root: ~/.config/helix
+      panes:
+        - hx config.toml
   - alacritty:
       root: ~/.config/alacritty
       panes:

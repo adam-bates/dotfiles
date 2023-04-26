@@ -18,7 +18,8 @@ insert = "bar"
 
 [editor.file-picker]
 hidden = false
-
+# git-ignore = false
+# max-depth = 7
 
 [keys.normal]
 h = "no_op"
@@ -36,8 +37,15 @@ G = "goto_last_line"
 
 "C-k" = ["goto_prev_paragraph", "move_visual_line_up", "collapse_selection"]
 "C-l" = ["goto_next_paragraph", "collapse_selection"]
+K = ["goto_prev_paragraph", "extend_line_up"]
+L = ["goto_next_paragraph"]
+
+J = "move_prev_word_start"
+":" = "move_next_word_end"
+
 "C-up" = ["page_up", "align_view_center"]
 "C-down" = ["page_down", "align_view_center"]
+
 D = "kill_to_line_end"
 C = ["kill_to_line_end", "insert_mode"]
 
@@ -53,6 +61,7 @@ C = ["kill_to_line_end", "insert_mode"]
 "right" = "goto_next_buffer"
 "c" = ":buffer-close"
 
+":" = "command_mode"
 
 [keys.select]
 h = "no_op"
