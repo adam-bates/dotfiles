@@ -50,11 +50,10 @@ key_bindings:
   # Change to the next tmux window
   - { key: Semicolon, mods: Control|Shift, chars: "\x01\x6e" }
 
-  # Change to the previous tmux pane
-  - { key: J, mods: Control, chars: "\x01\x1b\x5b\x44" }
-
-  # Change to the next tmux pane
-  - { key: Semicolon, mods: Control, chars: "\x01\x1b\x5b\x43" }
+  - { key: J, mods: Control, chars: "\x01\x08" }
+  - { key: K, mods: Control, chars: "\x01\x0a" }
+  - { key: L, mods: Control, chars: "\x01\x0b" }
+  - { key: Semicolon, mods: Control, chars: "\x01\x0c" }
   
   # Split the current pane into two, left and right
   - { key: S, mods: Control, chars: "\x01\x25" }

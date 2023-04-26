@@ -45,20 +45,16 @@ root: ~/.config
 # attach: false
 
 windows:
-  - nvim:
-      root: ~/.config/nvim
-      panes:
-        - pwd && la
   - alacritty:
       root: ~/.config/alacritty
       panes:
         - pwd && la
-  - zsh: vim ~/.zshrc
+  - zsh: hx ~/.zshrc
   - tmux:
       root: ~/.config/tmuxinator
       layout: even-horizontal
       panes:
-        - tmux: vim ~/.tmux.conf
+        - tmux: hx ~/.tmux.conf
         - tmuxinator: cd ~/.config/tmuxinator && pwd && la
 
 
