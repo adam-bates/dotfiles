@@ -80,6 +80,10 @@ G = "goto_last_line"
 "C-l" = ["goto_next_paragraph"]
 "C-up" = ["page_up", "align_view_center"]
 "C-down" = ["page_down", "align_view_center"]
+
+J = "move_prev_word_start"
+":" = "move_next_word_end"
+
 D = "kill_to_line_end"
 C = ["kill_to_line_end", "insert_mode"]
 
@@ -96,4 +100,5 @@ C = ["kill_to_line_end", "insert_mode"]
 "right" = "goto_next_buffer"
 "c" = ":buffer-close"
 
+":" = "command_mode"
 

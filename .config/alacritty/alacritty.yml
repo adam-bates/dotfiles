@@ -27,6 +27,12 @@ font:
     family: "Hack Nerd Font"
 
 key_bindings:
+  - { key: Minus, chars: "\x5c" }
+  - { key: Minus, mods: Shift, chars: "\x7c" }
+
+  - { key: Backslash, chars: "\x2d" }
+  - { key: Backslash, mods: Shift, chars: "\x5f" }
+
   # Rename the current tmux window
   - { key: Return, mods: Control, chars: "\x01\x2c" }
 
