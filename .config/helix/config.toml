@@ -18,7 +18,7 @@ insert = "bar"
 
 [editor.file-picker]
 hidden = false
-# git-ignore = false
+git-ignore = false
 # max-depth = 7
 
 [keys.normal]
@@ -32,7 +32,7 @@ l = "move_visual_line_down"
 V = ["select_mode", "extend_to_line_bounds"]
 esc = ["collapse_selection", "keep_primary_selection"]
 
-g = { a = "code_action" }
+g = { a = "code_action", j = "goto_line_start", l = "move_line_down", ";" = "goto_line_end" }
 G = "goto_last_line"
 
 "C-k" = ["goto_prev_paragraph", "move_visual_line_up", "collapse_selection"]
@@ -50,7 +50,7 @@ D = "kill_to_line_end"
 C = ["kill_to_line_end", "insert_mode"]
 
 [keys.normal.space]
-"/" = "toggle_comments"
+"." = "toggle_comments"
 "w" = ":write"
 "W" = ":write-all"
 "q" = ":quit"
@@ -73,23 +73,24 @@ l = "extend_line_down"
 
 esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
 
-g = { a = "code_action" }
+g = { a = "code_action", j = "goto_line_start", l = "move_line_down", ";" = "goto_line_end" }
 G = "goto_last_line"
+
 
 "C-k" = ["goto_prev_paragraph", "extend_line_up"]
 "C-l" = ["goto_next_paragraph"]
-"C-up" = ["page_up", "align_view_center"]
-"C-down" = ["page_down", "align_view_center"]
+K = ["goto_prev_paragraph", "extend_line_up"]
+L = ["goto_next_paragraph"]
 
-J = "move_prev_word_start"
-":" = "move_next_word_end"
+J = "extend_prev_word_start"
+":" = "extend_next_word_end"
 
 D = "kill_to_line_end"
 C = ["kill_to_line_end", "insert_mode"]
 
 
 [keys.select.space]
-"/" = "toggle_comments"
+"." = "toggle_comments"
 "w" = ":write"
 "W" = ":write-all"
 "q" = ":quit"
@@ -101,4 +102,3 @@ C = ["kill_to_line_end", "insert_mode"]
 "c" = ":buffer-close"
 
 ":" = "command_mode"
-
