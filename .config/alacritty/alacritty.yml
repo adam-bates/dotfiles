@@ -22,9 +22,9 @@ scrolling:
   multiplier: 3
 
 font:
-  size: 12.5
+  size: 16
   normal:
-    family: "Hack Nerd Font"
+    family: "Cascadia Code"
 
 key_bindings:
   - { key: Minus, chars: "\x5c" }
